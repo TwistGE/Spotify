@@ -5,14 +5,14 @@ import './vars.css'
 import './reset.css'
 import './main_content.css'
 
-import SearchBar from './componentes/SearchBar.jsx'
 import Sidebar from './componentes/sidebar.jsx'
 import Footer from './componentes/Footer.jsx'
+import Main from './componentes/Main.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Sidebar />
-    <SearchBar />
     <Footer />
+    <Main />
   </StrictMode>
 )

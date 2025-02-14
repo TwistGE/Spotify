@@ -15,13 +15,13 @@ body {
 }
 
 .sidebar_navigation {
-  background-color: #121212;
+  background-color: var(--box-color);
   border-radius: 8px;
   padding: 16px 0 0 16px;
 }
 
 .sidebar_navigation .logo {
-  background-color: #121212;
+  background-color: var(--box-color);
   display: flex;
   border-radius: 8px;
   padding: 16px 0 0 16px;
@@ -174,6 +174,51 @@ body {
   margin: 8px;
   padding: 8px;
   border-radius: 20px;
+}
+/*Footer*/
+.footer{
+  background: linear-gradient(to right, rgb(174, 40, 150), rgb(80, 155, 245));
+  display: flex;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  max-height: 85px;
+  z-index: 1;
+}
+
+.footer .textos_footer p{
+  padding: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  font-family: var(--font-dm-sans);
+}
+
+.footer .textos_footer .testar{
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.login_footer {
+  align-self: center;
+}
+
+.login_footer button{
+  padding: 12px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .4s;
+ 
+}
+
+.login_footer button:hover{
+  background-color: #b3b3b3;
 }
 
 
