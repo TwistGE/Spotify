@@ -7,7 +7,7 @@ import { songsArray } from '../assets/database/songs';
 
 const SearchBar = () => {
   return <>
-        <div class="main_container">
+        <div className="main_container">
             <Header />
 
             <div className="main_spotify">

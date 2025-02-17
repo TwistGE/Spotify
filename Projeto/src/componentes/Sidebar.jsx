@@ -4,14 +4,17 @@
 
 import React from 'react'
 import spotifyLogo from '../assets/logo/spotify-logo.png' 
+
+import { Link } from 'react-router-dom'
+
 const Sidebar = () => {
   return <>
       <div className='sidebar'>
         <nav className="sidebar_navigation">
           <div className="logo">
-            <a href="/">
+            <Link href="/">
               <img src={spotifyLogo} alt="Logo Spotify"/>
-            </a>
+            </Link>
           </div>
 
 
@@ -25,7 +28,7 @@ const Sidebar = () => {
               </li>
 
               <li>
-                <a href="">
+                <a href="#search_input">
                   <span className="fa fa-search"></span>
                   <span>Buscar</span>
                 </a>
@@ -54,13 +57,13 @@ const Sidebar = () => {
             </div>
           </section>
 
-          <div class="cookies">
-            <a href="">Cookies</a>
+          <div className="cookies">
+            <Link href="/">Cookies</Link>
           </div>
 
-          <div class="languages">
-            <button class="languages_btn">
-              <span class="fa fa-globe"></span>
+          <div className="languages">
+            <button className="languages_btn">
+              <span className="fa fa-globe"></span>
               <span>Portugues do Brasil</span>
             </button>
           </div>

@@ -5,25 +5,25 @@ import Search from '../assets/logo/search.png';
 
 const Header = () => {
   return (
-    <nav class="header_navigation">
-                    <div class="navigation">
-                        <button class="arrow_left">
+    <nav className="header_navigation">
+                    <div className="navigation">
+                        <button className="arrow_left">
                             <img src={SmallLeft} alt="Seta esquerda" />
                         </button>
     
-                        <button class="arrow_right">
+                        <button className="arrow_right">
                             <img src={SmallRight} alt="Seta direita" />
                         </button>
                     </div>
                         
-                    <div class="header_search">
+                    <div className="header_search">
                             <img src={Search} alt="" />
-                            <input maxlength="800" placeholder="O que voce quer ouvir?" i d="search_input" type="text" />
+                            <input maxLength="800" placeholder="O que voce quer ouvir?" id="search_input" type="text" />
                     </div>
     
-                    <div class="header_login">
-                            <button class="subscribe">Inscreva-se</button>
-                            <button class="login">Entrar</button>
+                    <div className="header_login">
+                            <button className="subscribe">Inscreva-se</button>
+                            <button className="login">Entrar</button>
                     </div>
                 </nav>
   )
