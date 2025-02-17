@@ -176,6 +176,7 @@ img{
   justify-content: center;
   align-items: center;
   transition: background-color ease 200ms;
+  text-decoration: none;
 }
 
 .single-item:hover{
