@@ -16,7 +16,7 @@ const SingleItem = ({id, name, image, banner, artist,idPath}) => {
         </div>
                                     
         <div className="single-item__texts">
-                                        <div className="single-item__2lines">
+            <div className="single-item__2lines">
                 <p className='single-item__title'>{name}</p>
             </div>
             <p className='single-item__type'>{artist ?? "Artista"}</p>

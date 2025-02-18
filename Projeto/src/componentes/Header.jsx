@@ -5,7 +5,9 @@ import Search from '../assets/logo/search.png';
 
 const Header = () => {
   return (
-    <nav className="header_navigation">
+    <div className="main_container">
+
+        <nav className="header_navigation">
                     <div className="navigation">
                         <button className="arrow_left">
                             <img src={SmallLeft} alt="Seta esquerda" />
@@ -26,6 +28,7 @@ const Header = () => {
                             <button className="login">Entrar</button>
                     </div>
                 </nav>
+    </div>
   )
 }
 

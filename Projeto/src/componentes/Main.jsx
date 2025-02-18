@@ -5,15 +5,29 @@ import ItemList from './ItemList';
 import { artistArray } from '../assets/database/artists';
 import { songsArray } from '../assets/database/songs';
 
-const SearchBar = () => {
+const SearchBar = ({type}) => {
   return <>
         <div className="main_container">
-            <Header />
 
             <div className="main_spotify">
-                <ItemList tittle="Artistas" items={5} itemsArray={artistArray} path="/artists" idPath="/artists"/>
+                {type === "artists" || type === undefined ? (
+                    <ItemList 
+                        tittle="Artistas" 
+                        items={5}
+                        itemsArray={artistArray} 
+                        path="/artists" 
+                        idPath="/artist"
+                    />) : (<></>)
+                }
 
-                <ItemList tittle="Músicas" items={10} itemsArray={songsArray} path="/songs" idPath="/songs"/>
+                {type === "songs" || type === undefined ? (
+                    <ItemList
+                        tittle="Músicas"
+                        items={10}
+                        itemsArray={songsArray}
+                        path="/songs"
+                        idPath="/song"
+                    />) : (<></>)}
             </div>
 
         </div>            

@@ -12,7 +12,7 @@ const Sidebar = () => {
       <div className='sidebar'>
         <nav className="sidebar_navigation">
           <div className="logo">
-            <Link href="/">
+            <Link to="/">
               <img src={spotifyLogo} alt="Logo Spotify"/>
             </Link>
           </div>
@@ -21,10 +21,10 @@ const Sidebar = () => {
           <div>
             <ul>
               <li>
-                <a href="">
+                <Link to="/">
                   <span className="fa fa-home"></span>
                   <span>Início</span>
-                </a>
+                </Link>
               </li>
 
               <li>

@@ -1,8 +1,9 @@
 import React from 'react'
+import Main from "../componentes/Main.jsx"
 
 const Songs = () => {
   return (
-    <div>Songs</div>
+    <Main type="songs"/>
   )
 }
 
