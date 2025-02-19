@@ -29,6 +29,11 @@ body {
 
 .sidebar_navigation .logo a img {
   width: 30px;
+  transition: all 200ms ease ;
+}
+
+.sidebar_navigation .logo a img:hover{
+  transform: scale(1.1);
 }
 
 .sidebar nav ul {
@@ -40,14 +45,16 @@ body {
 .sidebar_navigation ul li {
   padding: 10px 0px;
   font-family: var(--font-dm-sans);
+  transition: all 200ms ease ;
 }
+
 
 .sidebar_navigation ul li a {
   color: #b3b3b3;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-
+  
 }
 
 .library {
@@ -141,12 +148,15 @@ body {
   padding: 10px;
   border: 0px;
   width: 113px;
-  transition: 0.8ms;
+  transition: all 0.8ms ease;
   cursor: pointer;
 }
 
 .section_playlist_content .section_playlist_btn:hover {
-  opacity: 0.8;
+  opacity: 1;
+  transform: scale(1.05);
+  background-color: hsl(141, 75%, 50%);
+  box-shadow: 0 0 5px 5px black;
 }
 
 .sidebar .cookies {

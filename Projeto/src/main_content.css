@@ -11,6 +11,8 @@
   --gray-900: hsl(0, 0%, 10%);
   --gray-950: hsl(0,0%,7.1%);
   --gray-1000: hsl(0, 0%, 5%);
+
+  --transition-duration: 200ms;
 }
 body{
   height: 100%;
@@ -19,7 +21,6 @@ body{
   max-width: 80vw;
   height: 100%;
   margin-left: 320px;
-  margin-right: 56px;
   display: flex;
   flex-direction: column;
 }
@@ -58,6 +59,15 @@ body{
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  transition: all 200ms ease ;
+}
+.arrow_right:hover{
+  transform: scale(1.1);
+  background-color: hsl(0, 0%, 28%);
+}
+.arrow_left:hover{
+  transform: scale(1.1);
+  background-color: hsl(0, 0%, 28%);
 }
 
 .header_login {
@@ -74,6 +84,11 @@ body{
   background-color: #242424;
   border-radius: 500px;
   border: 1px solid transparent;
+  transition: all 200ms ease ;
+}
+
+.header_search:hover{
+  transform:scale(1.1);
 }
 
 .header_search img {
@@ -100,6 +115,13 @@ body{
   background-color: transparent;
   margin-right: 32px;
   border: none;
+  transition: all 200ms ease ;
+  cursor: pointer;
+}
+
+.header_login .subscribe:hover{
+  transform: scale(1.1);
+  color: hsl(141, 75%, 50%);
 }
 
 .header_login .login {
@@ -112,10 +134,12 @@ body{
   border: none;
   cursor: pointer;
   transition: 0.8s;
+  transition: all 200ms ease ;
 }
 
 .header_login .login:hover {
-  opacity: 0.7;
+  transform: scale(1.1);
+  background-color: hsl(141, 75%, 50%);
 }
 
 /*Parte principal*/
@@ -178,7 +202,7 @@ img{
   border-radius: 15px;
   justify-content: center;
   align-items: center;
-  transition: background-color ease 200ms;
+  transition: background-color ease var(--transition-duration);
   text-decoration: none;
 }
 
@@ -222,10 +246,18 @@ img{
   opacity: 1;
   translate: 0;
   position: fixed;
-  right: 75px;
+  right: 38px;
   bottom: 18px;
   color: var(--gray-800);
   transform: translateY(0%);
+  transition: all 200ms ease;
+}
+
+.single-item__icon--artist:hover{
+  transform: scale(1.1);
+  color: hsl(141deg, 75%, 50%);
+  cursor: pointer;
+  filter: drop-shadow(0 0px 5px hsl(141deg, 75%, 50%));
 }
 
 .single-item:hover .single-item__icon{
@@ -237,7 +269,7 @@ img{
 
 .item-list__container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(172px,1fr));
 }
 
 .single-item__title{
@@ -359,4 +391,115 @@ img{
 
 .song-list__see-more:hover{
   text-decoration: underline;
+}
+
+
+/* Song */
+
+.song{
+  flex: 1;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.song__container{
+  background-color: var(--box-color);
+  margin: 10px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.song__image-container{
+  box-shadow: 0px 0px 25px 15px hsl(0deg 0% 0%/25%);
+}
+
+.song__bar{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  place-items: center;
+  margin: px;
+  background-color: black;
+  padding: 16px 25px;
+  border-radius: 8px;
+}
+
+.song__artist-image{
+  justify-self: flex-start;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.song__name{
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.player{
+  justify-self: stretch;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.player__controllers{
+  font-size: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.player__icon{
+  color: #fff;
+  cursor: pointer;
+  transition-property: transform, color;
+  transition-timing-function: ease;
+  transition-duration: var(--transition-duration);
+}
+
+.player__icon:hover{
+  transform: scale(105%);
+  color: hsl(141deg, 75%, 50%);
+  box-shadow: 0 0 10px 10px hsl(0deg 0% 0%/25%);
+}
+
+.player__icon--play{
+  font-size: 35px;
+}
+
+.player__progress{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.player__time{
+  width: 45px;
+  text-align: center;
+}
+
+.player__bar{
+  width: 100%;
+  height: 4px;
+  background-color: #666;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.player__bar-progress{
+  --_progress: 0;
+  height: 100%;
+  width: var(--_progress);
+  background-color: #fff;
+  transition: width ease 200ms;
 }
