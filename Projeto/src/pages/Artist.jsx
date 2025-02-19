@@ -11,7 +11,6 @@ const Artist = () => {
         <div className="artist__header"
         style={{backgroundImage:"linear-gradient(to bottom, var(--_shade), var(--_shade)), url(https://www.hashtagtreinamentos.com/wp-content/uploads/2025/02/mc-tuto.png)"}}>
           <h2 className='artist__title'>MC TUTO</h2>
-          <FontAwesomeIcon className="single-item__icon single-item__icon--artist" icon={faCirclePlay} />
         </div>
 
 
@@ -19,6 +18,7 @@ const Artist = () => {
           <h2>Populares</h2>
           
           <SongList />
+          <FontAwesomeIcon className="single-item__icon single-item__icon--artist" icon={faCirclePlay} />
           
         </div>
       </div>

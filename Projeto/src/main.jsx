@@ -21,7 +21,6 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Sidebar />
-      <Footer />
       <Header />
 
       <Routes>
