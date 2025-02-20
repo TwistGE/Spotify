@@ -422,7 +422,7 @@ img{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   place-items: center;
-  margin: px;
+  gap:10px;
   background-color: black;
   padding: 16px 25px;
   border-radius: 8px;
@@ -435,7 +435,7 @@ img{
 }
 
 .song__name{
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
 }
 
