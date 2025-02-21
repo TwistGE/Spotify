@@ -13,7 +13,7 @@ import Artist from './pages/Artist'
 import Songs from './pages/Songs'
 import Song from './pages/Song'
 import Header from './componentes/Header.jsx'
-import Sidebar from './componentes/sidebar.jsx'
+import Sidebar from './componentes/Sidebar.jsx'
 
 createRoot(document.getElementById('root')).render(
   
