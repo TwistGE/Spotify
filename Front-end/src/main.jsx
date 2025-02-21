@@ -5,8 +5,6 @@ import './styles.css'
 import './vars.css'
 import './main_content.css'
 
-import Sidebar from './componentes/sidebar.jsx'
-import Footer from './componentes/Footer.jsx'
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from './pages/Home'
@@ -15,6 +13,7 @@ import Artist from './pages/Artist'
 import Songs from './pages/Songs'
 import Song from './pages/Song'
 import Header from './componentes/Header.jsx'
+import Sidebar from './componentes/sidebar.jsx'
 
 createRoot(document.getElementById('root')).render(
   
