@@ -9,14 +9,14 @@ import {songsArray} from "../assets/database/songs"
 const Artist = () => {
   const {id} =useParams()
 // Variavel que armazenara = Filtro ((Cada parametro) => o ID do parametro === condição)[primeiro item da lista]
-  const artistObj = artistArray.filter((currentArtistObj) => currentArtistObj.id === Number(id))[0]
+  const artistObj = artistArray.filter((currentArtistObj) => currentArtistObj._id === id)[0]
   // const {image} = artistObj
   const {name} = artistObj
   const {banner} = artistObj
 
    const songsArtist = songsArray.filter((currentsongObj) => currentsongObj.artist === name)
    const randomIndex = Math.floor(Math.random()*(songsArtist.length-1))
-   const randomIdSongArtist = songsArtist[randomIndex].id
+   const randomIdSongArtist = songsArtist[randomIndex]._id
 
    return <>
   <div className="main_container">

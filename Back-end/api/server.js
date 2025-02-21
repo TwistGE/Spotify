@@ -1,23 +1,28 @@
 //         POST    GET    PUT      DELET
 //CRUD -> Create, Read, Uptade and Delete
-import express from "express";
-import { artistArray } from "../../Front-end/src/assets/database/artists.js";
-import { songsArray } from "../../Front-end/src/assets/database/songs.js";
 
+//Middleware atual entre a escuta e o solicitante
+import express from "express";
+import { db } from "./connect.js";
+import cors from "cors";
+
+// iniciar Servidor "node  --watch ./api/server.js"
 const app = express();
 
 const PORT = 3002;
+
+app.use(cors());
 
 app.get('/', (request,response)=>{
     response.send("Só vamos para os endpoints '/artists' e '/songs'");
 });
 
-app.get('/artists', (request,response)=>{
-    response.send(artistArray);
+app.get('/artists', async (request,response)=>{
+    response.send(await db.collection("Artists").find({}).toArray());
 });
 
-app.get('/songs', (request,response)=>{
-    response.send(songsArray);
+app.get('/songs', async (request,response)=>{
+    response.send(await db.collection("Songs").find({}).toArray());
 });
 
 app.listen(PORT,()=> {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const SongItem = ({id,image,name,duration,index}) => {
+const SongItem = ({_id,image,name,duration,index}) => {
   return (
-    <Link to={`/song/${id}`} style={{textDecoration:"none"}}>
+    <Link to={`/song/${_id}`} style={{textDecoration:"none"}}>
       <div  className='song-item'>
         <div className="song-item__number__album">
             <p>{index+1}</p>

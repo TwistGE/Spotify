@@ -1,5 +1,5 @@
 import React from 'react'
-import Player from '../componentes/player'
+import Player from '../componentes/Player'
 import { Link,useParams } from 'react-router-dom'
 import {songsArray} from "../assets/database/songs"
 import {artistArray} from "../assets/database/artists"
@@ -7,7 +7,7 @@ import {artistArray} from "../assets/database/artists"
 const Song = () => {
   const {id} = useParams()
 
-  const songActual = songsArray.filter((currentValue) => currentValue.id === Number(id))[0]
+  const songActual = songsArray.filter((currentValue) => currentValue._id === id)[0]
 
   const artistActual = artistArray.filter((currentValue) => currentValue.name === songActual.artist)[0]
   console.log(artistActual)
