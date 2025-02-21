@@ -434,6 +434,10 @@ img{
   overflow: hidden;
 }
 
+.song__artist-image img{
+  object-fit: cover;
+}
+
 .song__name{
   font-size: 16px;
   font-weight: 700;

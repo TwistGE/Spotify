@@ -23,7 +23,7 @@ const Song = () => {
           </div>
 
           <div className="song__bar">
-            <Link to={`/artist/${artistActual.id}`} className="song__artist-image">
+            <Link to={`/artist/${artistActual._id}`} className="song__artist-image">
               <img width={75} height={75} src={artistActual.image} alt={`Imagem do artista ${artistActual.name}`} />
             </Link>
 
